@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>No.1 - 制作一个简单的菜单动画效果</title>
+  <style type="text/css">
+    * {margin: 0;padding: 0;}
+    .menu {
+      width: 120px;
+      padding-bottom: 10px;
+      margin-top: 30px;
+      text-align: center;
+      color: black;
+    }
+    #btn {
+      border-radius: 5px;
+      border: 1px solid #eee;
+      padding: 5px 15px;
+      background-color: white;
+      outline: none;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    #menu-text {
+      transition-duration: 1s;
+    }
+    .menu-line {
+      width: 0;
+      padding: 0;
+      height: 2px;
+      background-color: palevioletred;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+    .btnHover {
+      padding: 0 40%;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div id="menu" class="menu">
+      <div id="menu-text">前端学院</div>
+      <span id="menu-line" class="menu-line"></span>
+    </div>
+    <button id="btn">切换样式</button>
+  </div>
+
+  <script type="text/javascript">
+    function $(id){
+      return document.getElementById(id);
+    }
+    // 鼠标进
+    $("btn").onmouseover=function(){
+      $("menu-line").className = "menu-line btnHover";
+      $("menu-text").style.color = "palevioletred";
+    }
+    // // 鼠标出
+    $("btn").onmouseout=function(){
+      $("menu-line").className = "menu-line";
+      $("menu-text").style.color = "black";
+    }
+  </script>
+
+</body>
+</html>
