@@ -163,12 +163,11 @@
                 right: 0;
             }
             /*鼠标hover样式 写在这里*/
-            .transition {
-              transition-duration: 1s;
-              transition-timing-function: ease-out;
-            }
             .container:hover .eye-bottom{      /*眼睛*/
-              top: -20px;
+              margin-top: 28px;
+            }
+            .container:hover .eye-core{
+              transform: scaleX(0.8);
             }
             .container:hover .face-red{        /*腮红*/
               opacity: 0.8;
@@ -181,6 +180,10 @@
             }
             .container:hover .ear-wrap>.right{        /*右耳朵*/
               transform: rotate(25deg);
+            }
+            .eye-bottom,.face-red,.mouth,.ear {
+              transition-duration: 1s;
+              transition-timing-function: ease-out;
             }
         </style>
     </head>
@@ -198,15 +201,15 @@
                         <div class="eye-circle">
                             <div class="eye-core"></div>
                         </div>
-                        <div class="eye-bottom transition"></div>
-                        <div class="face-red transition"></div>
+                        <div class="eye-bottom"></div>
+                        <div class="face-red"></div>
                     </div>
                     <div class="eye right">
                         <div class="eye-circle">
                             <div class="eye-core"></div>
                         </div>
-                        <div class="eye-bottom transition"></div>
-                        <div class="face-red transition"></div>
+                        <div class="eye-bottom"></div>
+                        <div class="face-red"></div>
                     </div>
                 </div>
                 <!-- 鼻子 -->
@@ -215,19 +218,15 @@
                 <!-- 嘴巴 -->
                 <div class="mouth-wrap">
                     <!-- <div class="mouth-top"></div> -->
-                    <div class="mouth left transition"></div>
-                    <div class="mouth right transition"></div>
+                    <div class="mouth left"></div>
+                    <div class="mouth right"></div>
                 </div>
             </div>
             <!-- 耳朵 -->
             <div class="ear-wrap">
-                <div class="ear left transition"> </div>
-                <div class="ear right transition"> </div>
+                <div class="ear left"> </div>
+                <div class="ear right"> </div>
             </div>
-        </div>
-
-        <div class="note">
-          <a href="https://blog.csdn.net/LYP_csdn_jy/article/details/80107831" target="_blank">笔记</a>
         </div>
     </body>
 </html>
