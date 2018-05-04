@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>No.5 - 纯 CSS 制作绕中轴旋转的立方体</title>
+  <link rel="stylesheet" type="text/css" href="CSS/init.css" />
+  <style type="text/css">
+    *,
+    *:before,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #1b1b1b;
+      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+      font-weight: 300;
+    }
+
+    #wrapper {
+      padding-top: 15%;
+    }
+
+    .viewport {
+      -webkit-perspective: 300px;
+      -moz-perspective: 300px;
+      -ms-perspective: 300px;
+      -o-perspective: 300px;
+      perspective: 300px;
+      -webkit-perspective-origin: 50% 100px;
+      -moz-perspective-origin: 50% 100px;
+      -ms-perspective-origin: 50% 100px;
+      -o-perspective-origin: 50% 100px;
+      perspective-origin: 50% 100px;
+    }
+
+    .cube {
+      position: relative;
+      margin: 0 auto;
+      height: 200px;
+      width: 200px;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition: 12s;
+      -moz-transition: 12s;
+      -ms-transition: 12s;
+      -o-transition: 12s;
+      transition: 12s;
+    }
+
+    .cube>div {
+      overflow: hidden;
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      background-color: #03a9f463;
+      border: 2px solid #1395fd;
+    }
+
+    .cube>div:first-child {
+      -webkit-transform: rotateX(90deg) translateZ(100px);
+      -moz-transform: rotateX(90deg) translateZ(100px);
+      -ms-transform: rotateX(90deg) translateZ(100px);
+      -o-transform: rotateX(90deg) translateZ(100px);
+      transform: rotateX(90deg) translateZ(100px);
+      outline: 1px solid transparent;
+    }
+
+    .cube>div:nth-child(2) {
+      -webkit-transform: translateZ(100px);
+      -moz-transform: translateZ(100px);
+      -ms-transform: translateZ(100px);
+      -o-transform: translateZ(100px);
+      transform: translateZ(100px);
+      outline: 1px solid transparent;
+    }
+
+    .cube>div:nth-child(3) {
+      -webkit-transform: rotateY(90deg) translateZ(100px);
+      -moz-transform: rotateY(90deg) translateZ(100px);
+      -ms-transform: rotateY(90deg) translateZ(100px);
+      -o-transform: rotateY(90deg) translateZ(100px);
+      transform: rotateY(90deg) translateZ(100px);
+      outline: 1px solid transparent;
+    }
+
+    .cube>div:nth-child(4) {
+      -webkit-transform: rotateY(180deg) translateZ(100px);
+      -moz-transform: rotateY(180deg) translateZ(100px);
+      -ms-transform: rotateY(180deg) translateZ(100px);
+      -o-transform: rotateY(180deg) translateZ(100px);
+      transform: rotateY(180deg) translateZ(100px);
+      outline: 1px solid transparent;
+    }
+
+    .cube>div:nth-child(5) {
+      -webkit-transform: rotateY(-90deg) translateZ(100px);
+      -moz-transform: rotateY(-90deg) translateZ(100px);
+      -ms-transform: rotateY(-90deg) translateZ(100px);
+      -o-transform: rotateY(-90deg) translateZ(100px);
+      transform: rotateY(-90deg) translateZ(100px);
+      outline: 1px solid transparent;
+    }
+
+    .cube>div:nth-child(6) {
+      -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+      -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+      -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+      -o-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+      transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+      outline: 1px solid transparent;
+    }
+    .cube:hover{
+      -webkit-transform-origin: center center;
+      -moz-transform-origin: center center;
+      -ms-transform-origin: center center;
+      -o-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transform: rotateY(-360deg);
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      -o-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="viewport">
+      <div class="cube">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+    </div>
+  </div>
+  <div class="note">
+    <a href="https://blog.csdn.net/LYP_csdn_jy/article/details/80107831" style="color: white" target="_blank">笔记</a>
+  </div>
+</body>
+
+</html>
